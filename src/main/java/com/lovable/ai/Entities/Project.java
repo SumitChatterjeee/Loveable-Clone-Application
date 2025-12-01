@@ -5,6 +5,6 @@ import lombok.experimental.FieldDefaults;
 
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Project {
-    Long id;
+    Integer id;
     String name;
 }
