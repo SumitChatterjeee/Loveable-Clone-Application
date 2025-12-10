@@ -1,17 +1,20 @@
 package com.lovable.ai.Entities;
+
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
+
 import java.time.Instant;
-@FieldDefaults(level = AccessLevel.PRIVATE)
+
 @Data
-public class User {
+@FieldDefaults(level= AccessLevel.PRIVATE)
+public class ProjectFile {
     Long id;
-    String email;
-    String passwordhash;
-    String name;
-    String avatarurl;
+    Project project;
+    String path;
+    String minioObjectKey;
     Instant createdAt;
     Instant updatedAt;
-    Instant deletedAt;
+    User createdBy;
+    User updatedBy;
 }

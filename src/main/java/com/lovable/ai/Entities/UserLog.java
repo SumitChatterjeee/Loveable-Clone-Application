@@ -1,18 +1,20 @@
 package com.lovable.ai.Entities;
 
 import lombok.AccessLevel;
+import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
 import java.time.Instant;
 
+@Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Project {
+public class UserLog {
     Long id;
-    String name;
-    User owner;
-    Boolean isPublic=false;
+    User user;
+    Project project;
+    String action;
+    Integer tokenUsed;
+    Integer durationMs;
+    String metaData;
     Instant createdAt;
-    Instant updatedAt;
-    Instant deletedAt;
-
 }
